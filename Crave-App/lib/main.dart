@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   GoogleMapController? mapController; //contrller for Google map
   Set<Marker> markers = Set(); //markers for google map
-  LatLng showLocation = const LatLng(33.7701, 118.1937);
+  LatLng showLocation = const LatLng(33, 118);
 
   @override
   Widget build(BuildContext context) {
