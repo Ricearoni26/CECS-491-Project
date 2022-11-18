@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "80e49e94fbfc421f12edd11a39dc64ec5d30edcaf9b724b418c24bef27188178"
+build_start_time: [1668800411, 785846948]
+build_end_time: [1668800411, 888753890]
+inputs:
+  "/Users/josephrice/Desktop/Github-Files/CECS-491-Project/Project_Folder/Crave-App/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1668800375, 205001115]
+  "/Users/josephrice/Desktop/Github-Files/CECS-491-Project/Project_Folder/Crave-App/macos/Runner/AppDelegate.swift": !private [1667780675, 501349925]
+  "/Users/josephrice/Desktop/Github-Files/CECS-491-Project/Project_Folder/Crave-App/macos/Runner/MainFlutterWindow.swift": !private [1667780675, 505152702]
