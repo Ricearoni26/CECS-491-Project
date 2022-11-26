@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,44 +13,54 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Crave"),
+        title: const Text('Crave',
+          style: TextStyle( color:
+            Colors.white,
+            fontSize: 35,
+          ),
+        ),
         centerTitle: true,
+
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
-        // child: Column(
-        //   children: [
-        //     ElevatedButton(onPressed: (){
-        //       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-        //         return const SimpleMapScreen();
-        //       }));
-        //     }, child: const Text("Simple Map")),
+        height: MediaQuery.of(context).size.height,
+        child: const GoogleMap(
+          mapType: MapType.normal,
+          initialCameraPosition:
+          CameraPosition(
+            target:
+            LatLng(33.77, -118.19),
+            zoom: 15,
+          ),
+        )
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.orange,
 
-        //     ElevatedButton(onPressed: (){
-        //       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-        //         return const CurrentLocationScreen();
-        //       }));
-        //     }, child: const Text("User current location")),
-
-        //     ElevatedButton(onPressed: (){
-        //       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-        //         return const SearchPlacesScreen();
-        //       }));
-        //     }, child: const Text("Search Places")),
-
-        //     ElevatedButton(onPressed: (){
-        //       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-        //         return const NearByPlacesScreen();
-        //       }));
-        //     }, child: const Text("Near by Places")),
-
-        //     ElevatedButton(onPressed: (){
-        //       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-        //         return const PolylineScreen();
-        //       }));
-        //     }, child: const Text("Polyline between 2 points"))
-        //   ],
-        // ),
+              ),
+              child: Text('Settings',
+                style: TextStyle( color:
+                  Colors.white,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('Settings'),
+              leading: Icon(Icons.settings),
+              shape: RoundedRectangleBorder(),
+            ),
+            ListTile(
+              title: Text('Account'),
+              leading: Icon(Icons.account_box),
+            ),
+          ],
+        ),
       ),
     );
   }
