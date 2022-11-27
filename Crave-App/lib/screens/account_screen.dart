@@ -8,14 +8,18 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('This is just a temp screen'),
+        backgroundColor: Colors.orange,
       ),
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 150.0, vertical: 10),
-        child: Text(
-          'Temp screen',
-          style: TextStyle(fontWeight: FontWeight.bold),
+        child: Center(
+          child: Text(
+            'Temp screen',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
       ),
+
     );
   }
 }

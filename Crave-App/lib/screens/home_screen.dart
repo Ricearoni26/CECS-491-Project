@@ -10,19 +10,24 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  bool _toggled = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
-        title: const Text('Crave',
-          style: TextStyle( color:
-            Colors.white,
-            fontSize: 35,
-          ),
-        ),
         centerTitle: true,
         backgroundColor: Colors.orange,
+        title: Text('Crave',
+          style: TextStyle(
+            fontSize: 65,
+            fontWeight: FontWeight.bold,
+            foreground: Paint()
+              ..color = Colors.white
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 1
+          ),
+        ),
       ),
 
       body: SizedBox(
@@ -61,9 +66,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                 ),
                 currentAccountPicture: CircleAvatar(
-                  radius: 8.0,
-                  backgroundColor: Color(0xFFFFFFFF),
-                  backgroundImage: null,
+                  backgroundColor: Colors.white70,
+                  foregroundColor: Colors.black26,
+                  child:
+                    Text(
+                        'JS',
+                        style:
+                        TextStyle(
+                            fontSize: 100,
+                        ),
+                    ),
                 ),
               ),
             ),
@@ -80,17 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-            ListTile(
+            SwitchListTile(
               title: const Text('Notifications'),
-              leading: const Icon(Icons.notifications),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const AccountScreen(),
-                  ),
-                );
+              value: _toggled,
+              onChanged: (bool value) {
+                setState(() => _toggled = value);
               },
+              secondary: const Icon(Icons.notifications),
             ),
             ListTile(
               title: const Text('Appearance'),
