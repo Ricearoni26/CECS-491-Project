@@ -41,25 +41,30 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
-            const UserAccountsDrawerHeader(
-              accountEmail: Text('john.smith@gmail.com'),
-              accountName: Text('John Smith'),
-              decoration: BoxDecoration(
-                  color: Colors.red,
-                  gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [
-                        Colors.red,
-                        Colors.orange,
-                        Colors.yellow,
-                      ],
-                  ),
-              ),
-              currentAccountPicture: CircleAvatar(
-                radius: 70.0,
-                backgroundColor: Color(0xFFFFFFFF),
-                backgroundImage: null,
+            const SizedBox(
+              height: 250,
+              child: UserAccountsDrawerHeader(
+                currentAccountPictureSize: Size(150, 150),
+                margin: EdgeInsets.all(0.0),
+                accountEmail: Text('john.smith@gmail.com'),
+                accountName: Text('John Smith'),
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.red,
+                          Colors.orange,
+                          Colors.yellow,
+                        ],
+                    ),
+                ),
+                currentAccountPicture: CircleAvatar(
+                  radius: 8.0,
+                  backgroundColor: Color(0xFFFFFFFF),
+                  backgroundImage: null,
+                ),
               ),
             ),
             ListTile(
