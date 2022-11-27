@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'account_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: const Text('Crave',
           style: TextStyle( color:
             Colors.white,
@@ -20,8 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         centerTitle: true,
-
+        backgroundColor: Colors.orange,
       ),
+
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -37,30 +40,111 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: Drawer(
         child: ListView(
-          children: const <Widget>[
-            DrawerHeader(
+          children: <Widget>[
+            const UserAccountsDrawerHeader(
+              accountEmail: Text('john.smith@gmail.com'),
+              accountName: Text('John Smith'),
               decoration: BoxDecoration(
-                color: Colors.orange,
+                  color: Colors.red,
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.red,
+                        Colors.orange,
+                        Colors.yellow,
+                      ],
+                  ),
+              ),
+              currentAccountPicture: CircleAvatar(
+                radius: 70.0,
+                backgroundColor: Color(0xFFFFFFFF),
+                backgroundImage: null,
+              ),
+            ),
+            ListTile(
+              title: const Text('Account'),
+              leading: const Icon(Icons.account_box),
+              shape: const RoundedRectangleBorder(),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Notifications'),
+              leading: const Icon(Icons.notifications),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Appearance'),
+              leading: const Icon(Icons.display_settings),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
+            ),
 
-              ),
-              child: Text('Settings',
-                style: TextStyle( color:
-                  Colors.white,
-                  fontSize: 30,
-                ),
-              ),
+            ListTile(
+              title: const Text('Preference'),
+              leading: const Icon(Icons.accessibility_new_outlined),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
             ),
             ListTile(
-              title: Text('Settings'),
-              leading: Icon(Icons.settings),
-              shape: RoundedRectangleBorder(),
+              title: const Text('Help & Support'),
+              leading: const Icon(Icons.help_center),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
             ),
             ListTile(
-              title: Text('Account'),
-              leading: Icon(Icons.account_box),
+              title: const Text('About Us'),
+              leading: const Icon(Icons.question_mark_outlined),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AccountScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications),label:
+          'notifications')
+        ]
       ),
     );
   }
