@@ -15,33 +15,57 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.orange,
-        title: Text('Crave',
+        title: const Text(
+          'Crave',
           style: TextStyle(
             fontSize: 65,
             fontWeight: FontWeight.bold,
-            foreground: Paint()
-              ..color = Colors.white
-              ..style = PaintingStyle.stroke
-              ..strokeWidth = 1
+            fontFamily: 'Didot',
           ),
         ),
       ),
-
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: const GoogleMap(
-          mapType: MapType.normal,
-          initialCameraPosition:
-          CameraPosition(
-            target:
-            LatLng(33.77, -118.19),
-            zoom: 15,
+      body: Stack(
+        children: [
+          SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              child: const GoogleMap(
+                myLocationEnabled: true,
+                mapToolbarEnabled: true,
+                mapType: MapType.normal,
+                initialCameraPosition: CameraPosition(
+                  target: LatLng(33.77, -118.19),
+                  zoom: 15,
+                ),
+              ),
           ),
-        )
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              decoration:
+                InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  hintText: ('Enter a Restaurant'),
+                  prefixIcon: Icon(Icons.search),
+                  contentPadding:
+                    const EdgeInsets.only(left: 20, bottom: 5, right: 5),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -54,28 +78,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 accountEmail: Text('john.smith@gmail.com'),
                 accountName: Text('John Smith'),
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        colors: [
-                          Colors.red,
-                          Colors.orange,
-                          Colors.yellow,
-                        ],
-                    ),
+                  color: Colors.red,
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.red,
+                      Colors.orange,
+                      Colors.yellow,
+                    ],
+                  ),
                 ),
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.white70,
                   foregroundColor: Colors.black26,
-                  child:
-                    Text(
-                        'JS',
-                        style:
-                        TextStyle(
-                            fontSize: 100,
-                        ),
+                  child: Text(
+                    'JS',
+                    style: TextStyle(
+                      fontSize: 100,
                     ),
+                  ),
                 ),
               ),
             ),
@@ -112,7 +134,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-
             ListTile(
               title: const Text('Preference'),
               leading: const Icon(Icons.accessibility_new_outlined),
@@ -152,13 +173,14 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications),label:
-          'notifications')
-        ]
-      ),
+      bottomNavigationBar:
+          BottomNavigationBar(items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(icon: Icon(Icons.draw), label: 'Draw'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.restaurant), label: 'Random Restaurant'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.drive_eta), label: 'On the Road'),
+      ]),
     );
   }
 }
