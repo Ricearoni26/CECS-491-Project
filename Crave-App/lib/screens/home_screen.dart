@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_webservice/places.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'account_screen.dart';
 
@@ -31,40 +33,19 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Stack(
         children: [
           SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              child: const GoogleMap(
-                myLocationEnabled: true,
-                mapToolbarEnabled: true,
-                mapType: MapType.normal,
-                initialCameraPosition: CameraPosition(
-                  target: LatLng(33.77, -118.19),
-                  zoom: 15,
-                ),
-              ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              decoration:
-                InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: ('Enter a Restaurant'),
-                  prefixIcon: Icon(Icons.search),
-                  contentPadding:
-                    const EdgeInsets.only(left: 20, bottom: 5, right: 5),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.white),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(30),
-                    borderSide: BorderSide(color: Colors.white),
-                  ),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: const GoogleMap(
+              myLocationEnabled: true,
+              mapToolbarEnabled: true,
+              mapType: MapType.normal,
+              initialCameraPosition: CameraPosition(
+                target: LatLng(33.77, -118.19),
+                zoom: 15,
               ),
             ),
           ),
+          const LocationSearch(),
         ],
       ),
       drawer: Drawer(
@@ -183,4 +164,56 @@ class _HomeScreenState extends State<HomeScreen> {
       ]),
     );
   }
+}
+
+class LocationSearch extends StatelessWidget {
+  const LocationSearch({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          hintText: ('Enter a Restaurant'),
+          prefixIcon: Icon(Icons.search),
+          contentPadding: const EdgeInsets.only(left: 20, bottom: 5, right: 5),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.white),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+Future<void> _retrieveNearbyRestaurants(LatLng _userLocation) async {
+  PlacesSearchResponse _response = await places.searchNearbyWithRadius(
+      Location(_userLocation.latitude, _userLocation.longitude), 10000,
+      type: "restaurant");
+  Set<Marker> _restaurantMarkers = _response.results
+      .map((result) => Marker(
+      markerId: MarkerId(result.name),
+      // Use an icon with different colors to differentiate between current location
+      // and the restaurants
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
+      infoWindow: InfoWindow(
+          title: result.name,
+          snippet: "Ratings: " + (result.rating?.toString() ?? "Not Rated")),
+      position: LatLng(
+          result.geometry.location.lat, result.geometry.location.lng)))
+      .toSet();
+  setState(() {
+    _markers.addAll(_restaurantMarkers);
+  });
 }
