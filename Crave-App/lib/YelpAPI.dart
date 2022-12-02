@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Future<Album> fetchAlbum() async {
-
+  final String yelpAuthCode = 'Bearer'; //yelp authentication code
   final response = await http
       .get(Uri.parse('https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972'),
       headers:{
-        HttpHeaders.authorizationHeader: 'Bearer ' + 'WLiWrkkJtPiTTEY2TrZEvLfEOAAKWWciaRRSw2-RHEmBLykkuBeXjpACXhhzJWOJ5yawtyzoxUr_9ovAYsRpTYMGpr6ZKRPsCbx-cCxw8cgqkjiKemCAQgIs3ex-Y3Yx'
+        HttpHeaders.authorizationHeader: yelpAuthCode + 'WLiWrkkJtPiTTEY2TrZEvLfEOAAKWWciaRRSw2-RHEmBLykkuBeXjpACXhhzJWOJ5yawtyzoxUr_9ovAYsRpTYMGpr6ZKRPsCbx-cCxw8cgqkjiKemCAQgIs3ex-Y3Yx'
       },);
 
   /*if (response.statusCode == 200) {
