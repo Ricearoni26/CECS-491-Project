@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:google_maps_webservice/places.dart';
+//import 'package:google_maps_webservice/places.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'account_screen.dart';
 
@@ -195,25 +195,3 @@ class LocationSearch extends StatelessWidget {
     );
   }
 }
-
-
-// Future<void> _retrieveNearbyRestaurants(LatLng _userLocation) async {
-//   PlacesSearchResponse _response = await places.searchNearbyWithRadius(
-//       Location(_userLocation.latitude, _userLocation.longitude), 10000,
-//       type: "restaurant");
-//   Set<Marker> _restaurantMarkers = _response.results
-//       .map((result) => Marker(
-//       markerId: MarkerId(result.name),
-//       // Use an icon with different colors to differentiate between current location
-//       // and the restaurants
-//       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-//       infoWindow: InfoWindow(
-//           title: result.name,
-//           snippet: "Ratings: " + (result.rating?.toString() ?? "Not Rated")),
-//       position: LatLng(
-//           result.geometry.location.lat, result.geometry.location.lng)))
-//       .toSet();
-//   setState(() {
-//     _markers.addAll(_restaurantMarkers);
-//   });
-// }
