@@ -70,3 +70,7 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
+defaultConfig {
+    manifestPlaceholders = [gmApiKey: "$System.env.GOOGLE_MAPS_API_KEY"]
+}
