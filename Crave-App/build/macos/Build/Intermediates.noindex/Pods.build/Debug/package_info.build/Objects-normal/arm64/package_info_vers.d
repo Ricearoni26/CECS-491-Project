@@ -1,2 +1,0 @@
-dependencies: \
-  /Users/josephrice/Desktop/Github-Files/CECS-491-Project/Project_Folder/Crave-App/build/macos/Build/Intermediates.noindex/Pods.build/Debug/package_info.build/DerivedSources/package_info_vers.c
