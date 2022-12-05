@@ -48,10 +48,17 @@
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/geolocator_apple/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/geolocator_apple/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/geolocator_apple/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/.symlinks/plugins/flutter_config/example/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Dart SDK" level="project" />
     <orderEntry type="library" name="Flutter Plugins" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
   </component>
 </module>
