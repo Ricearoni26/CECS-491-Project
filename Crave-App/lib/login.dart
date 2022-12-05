@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'loginScreen.dart';
+import 'screens/loginScreen.dart';
 
 void main() {
   runApp(MyApp());
 }
-
-
 
 class MyApp extends StatefulWidget {
   @override
@@ -20,7 +18,8 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             title: Text('Flutter FlatButton Example'),
           ),
-          body: Center(child: Column(children: <Widget>[
+          body: Center(
+              child: Column(children: <Widget>[
             const TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -35,29 +34,20 @@ class _MyAppState extends State<MyApp> {
                 border: OutlineInputBorder(),
                 labelText: 'password',
               ),
-            )
-            ,
+            ),
             Container(
               margin: EdgeInsets.all(25),
               child: ElevatedButton(
                   child: Text('Login'),
-                  onPressed: (){
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const LoginScreen() ));//MyAPP() = new page
-                  }
-              ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const LoginScreen())); //MyAPP() = new page
+                  }),
             ),
-          ]
-          ))
-      ),
+          ]))),
     );
-
-
   }
 }
-
-
-
-
-
-
