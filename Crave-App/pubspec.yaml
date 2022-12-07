@@ -20,12 +20,13 @@ dependencies:
     sdk: flutter
   google_maps_flutter: ^2.0.4
   geolocator: ^8.0.5
-  location: ^1.4.1
+  location: ^4.4.0
   flutter_config: ^1.0.5
   json_annotation: ^4.0.0
   cupertino_icons: ^1.0.2
   envied: ^0.3.0
   http: ^0.13.5
+  flutter_login: ^4.1.1
 
 dev_dependencies:
   flutter_test:

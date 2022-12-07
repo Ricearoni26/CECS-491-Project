@@ -1,4 +1,0 @@
-#Fri Dec 02 12:04:39 PST 2022
-base.0=C\:\\Users\\Palha\\Desktop\\CECS-491-Project\\New 491\\CECS-491-Project\\Crave-App\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

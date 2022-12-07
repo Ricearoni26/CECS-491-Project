@@ -7,10 +7,14 @@
 // ignore_for_file: type=lint
 
 import 'package:geolocator_web/geolocator_web.dart';
+import 'package:location_web/location_web.dart';
+import 'package:url_launcher_web/url_launcher_web.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void registerPlugins([final Registrar? pluginRegistrar]) {
   final Registrar registrar = pluginRegistrar ?? webPluginRegistrar;
   GeolocatorPlugin.registerWith(registrar);
+  LocationWebPlugin.registerWith(registrar);
+  UrlLauncherPlugin.registerWith(registrar);
   registrar.registerMessageHandler();
 }
