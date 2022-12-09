@@ -1,8 +1,10 @@
+import 'package:crave_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 //import 'package:geolocator/geolocator.dart';
 //import 'package:google_maps_webservice/places.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'account_screen.dart';
+import 'package:flutter_google_places/flutter_google_places.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +16,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool _toggled = false;
-  //var apikey = env['GOOGLE_MAPS_API_KEY'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text(
           'Crave',
           style: TextStyle(
-            fontSize: 65,
+            fontSize: 45,
             fontWeight: FontWeight.bold,
             fontFamily: 'Didot',
           ),
@@ -152,16 +153,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
+            ListTile(
+              title: const Text('Log Out'),
+              leading: const Icon(Icons.logout),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
       bottomNavigationBar:
           BottomNavigationBar(items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.draw), label: 'Draw'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.restaurant), label: 'Random Restaurant'),
-        BottomNavigationBarItem(
-            icon: Icon(Icons.drive_eta), label: 'On the Road'),
+            BottomNavigationBarItem(icon: Icon(Icons.draw), label: 'Draw'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.restaurant), label: 'Random Restaurant'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.drive_eta), label: 'On the Road'),
       ]),
     );
   }

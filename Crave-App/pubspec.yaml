@@ -27,6 +27,7 @@ dependencies:
   envied: ^0.3.0
   http: ^0.13.5
   flutter_login: ^4.1.1
+  flutter_google_places: ^0.3.0
 
 dev_dependencies:
   flutter_test:

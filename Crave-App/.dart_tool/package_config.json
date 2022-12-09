@@ -62,6 +62,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ffi",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/ffi-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/josephrice/FlutterDev/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -72,6 +78,12 @@
       "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/flutter_config-1.0.8",
       "packageUri": "lib/",
       "languageVersion": "2.1"
+    },
+    {
+      "name": "flutter_google_places",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/flutter_google_places-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_lints",
@@ -146,6 +158,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "google_api_headers",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/google_api_headers-1.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "google_maps_flutter",
       "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/google_maps_flutter-2.2.1",
       "packageUri": "lib/",
@@ -166,6 +184,12 @@
     {
       "name": "google_maps_flutter_platform_interface",
       "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "google_maps_webservice",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/google_maps_webservice-0.0.20-nullsafety.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -242,6 +266,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "package_info_plus",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/package_info_plus-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/path-1.8.2",
       "packageUri": "lib/",
@@ -262,6 +298,12 @@
     {
       "name": "quiver",
       "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/quiver-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "rxdart",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/rxdart-0.26.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -380,13 +422,19 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "win32",
+      "rootUri": "file:///Users/josephrice/.pub-cache/hosted/pub.dev/win32-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "crave_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-07T20:17:18.305703Z",
+  "generated": "2022-12-09T18:07:38.318366Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-444.0.dev"
 }

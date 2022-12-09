@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		QD7oDxfmgpA+6lEYKSVzhP7hq8I=
+		ISmLqig2LOy5d8g0C2Qu0euTE9Y=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		qPHfdszddvf9nFAn2NHKYYUq9M8=
+		8JMb39jEL3Y+9WTqMP7JRe1gRtw=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -30,11 +30,19 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		xa2rt4VE3mHXjsckDAL/yg9twnc=
+		DGOrpKzE5i7SGN5P2XwSTmKB4LU=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
+		</data>
+		<key>flutter_assets/packages/flutter_google_places/assets/google_black.png</key>
+		<data>
+		gcHJexRXUa/eZ+zWzgfwxNGvVeI=
+		</data>
+		<key>flutter_assets/packages/flutter_google_places/assets/google_white.png</key>
+		<data>
+		/EjTyBzj/nusE+LbwLayR22clfo=
 		</data>
 		<key>flutter_assets/packages/flutter_login/assets/images/ecorp.png</key>
 		<data>
@@ -103,7 +111,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zY108ep3RcmwK3ZzaCl2xXNfFEdSR3zYdxnwJjQGjhE=
+			krsF/JhzPX1oV2LTXEXjUXX7pRuOrkmEy713doEo8XQ=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -117,7 +125,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FNlyMWH3OgMGlYKt1BPeE6b7ZhketVQzVs0WsVp5uvw=
+			1Aq9hBrkV6Pq5IgW8NNwpDuF0e9AtseBmaAIFiVCSV8=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -138,7 +146,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4jJ8uGDtcwLZNerjXJ2Fn+IUTjzwUxa6j3LEkR9phHk=
+			WwgevL/qI+3+q7iN7fF7tBCt8xySMzF4+oW2SYKQXsU=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -146,6 +154,20 @@
 			<key>hash2</key>
 			<data>
 			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/flutter_google_places/assets/google_black.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ac+pOdlI0CfP987EoH5lbG/G7qPkRm0o8fUXjoZQ0h8=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/flutter_google_places/assets/google_white.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Baqn3AhGOQS1CMlsNaXeNDA+oQ+naYgqA+4heYl97iw=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/flutter_login/assets/images/ecorp.png</key>
