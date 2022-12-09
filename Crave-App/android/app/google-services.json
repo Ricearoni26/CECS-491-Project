@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "498034837678",
+    "firebase_url": "https://craveapp-b698b-default-rtdb.firebaseio.com",
+    "project_id": "craveapp-b698b",
+    "storage_bucket": "craveapp-b698b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498034837678:android:3f0bd0324e4b268273453f",
+        "android_client_info": {
+          "package_name": "com.example.crave_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498034837678-4uursh63hou6ka4abj2v9l9ro14nghoo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqIbYD0VnU9BxCjsdKCRnWmEb0K77wUsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498034837678-4uursh63hou6ka4abj2v9l9ro14nghoo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
