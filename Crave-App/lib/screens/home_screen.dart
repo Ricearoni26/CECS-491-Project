@@ -187,6 +187,9 @@ class LocationSearch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const kGoogleApiKey = "API_KEY";
+
+
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
@@ -194,18 +197,19 @@ class LocationSearch extends StatelessWidget {
           filled: true,
           fillColor: Colors.white,
           hintText: ('Enter a Restaurant'),
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: const Icon(Icons.search),
           contentPadding: const EdgeInsets.only(left: 20, bottom: 5, right: 5),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
-            borderSide: BorderSide(color: Colors.white),
+            borderSide: const BorderSide(color: Colors.white),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
-            borderSide: BorderSide(color: Colors.white),
+            borderSide: const BorderSide(color: Colors.white),
           ),
         ),
       ),
     );
   }
 }
+
